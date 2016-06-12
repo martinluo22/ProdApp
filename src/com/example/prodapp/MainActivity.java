@@ -7,8 +7,9 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 public class MainActivity extends Activity {
@@ -56,13 +57,34 @@ public class MainActivity extends Activity {
 			LinearLayout layoutMenu = (LinearLayout)rootView.findViewById(R.id.layoutMenu);
 			layoutMenu.setOrientation(LinearLayout.HORIZONTAL);
 			
-			Button taskPage = new Button(rootView.getContext());
+			/*Button taskPage = new Button(rootView.getContext());
 			Button efficiencyPage = new Button(rootView.getContext());
 			Button settingsPage = new Button(rootView.getContext());
 			
 			layoutMenu.addView(taskPage);
 			layoutMenu.addView(efficiencyPage);
-			layoutMenu.addView(settingsPage);
+			layoutMenu.addView(settingsPage);*/
+			
+			ImageButton taskButton = (ImageButton)rootView.findViewById(R.id.taskButton);
+			taskButton.setOnClickListener(new OnClickListener(){
+
+				@Override
+				public void onClick(View v) {
+					
+				}
+				
+			});
+			
+			ImageButton efficiencyButton = (ImageButton)rootView.findViewById(R.id.efficiencyButton);
+			efficiencyButton.setOnClickListener(new OnClickListener(){
+
+				@Override
+				public void onClick(View v) {
+					
+					
+				}
+				
+			});
 			
 			
 			

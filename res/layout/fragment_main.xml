@@ -13,6 +13,18 @@ android:layout_height="wrap_content">
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ca.uwaterloo.lab3_202_27.MainActivity$PlaceholderFragment" >
 
+    <ImageButton
+        android:id = "@+id/taskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/task" />
+    
+    <ImageButton
+        android:id = "@+id/efficiencyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/efficiency" />
+    
     <TextView
         android:id="@+id/label1"
         android:layout_width="wrap_content"
