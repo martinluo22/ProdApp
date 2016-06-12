@@ -3,7 +3,7 @@
 android:id="@+id/scroll" android:layout_width="fill_parent"
 android:layout_height="wrap_content">
 
-<LinearLayout 
+<RelativeLayout 
     android:id="@+id/layoutMenu"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -15,15 +15,31 @@ android:layout_height="wrap_content">
 
     <ImageButton
         android:id = "@+id/taskButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/task" />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/task" />
+    
+    <ImageButton
+        android:id = "@+id/settingsButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/efficiencyButton"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/settings" />
+    
     
     <ImageButton
         android:id = "@+id/efficiencyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/efficiency" />
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/taskButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/efficiency" />
     
     <TextView
         android:id="@+id/label1"
@@ -31,5 +47,5 @@ android:layout_height="wrap_content">
         android:layout_height="wrap_content"
        />
 
-</LinearLayout>
+</RelativeLayout>
 </ScrollView>
