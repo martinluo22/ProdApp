@@ -1,6 +1,7 @@
 package com.example.prodapp;
 
 import android.app.Activity;
+
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+import android.content.Intent;
 
 public class MainActivity extends Activity {
 
@@ -69,8 +71,9 @@ public class MainActivity extends Activity {
 			taskButton.setOnClickListener(new OnClickListener(){
 
 				@Override
-				public void onClick(View v) {
-					
+				public void onClick(View v)   {
+					Intent intent = new Intent ("com.example.prodapp.Tasks");
+					startActivity(intent);
 				}
 				
 			});
@@ -80,7 +83,8 @@ public class MainActivity extends Activity {
 
 				@Override
 				public void onClick(View v) {
-					
+					Intent intent = new Intent ("com.example.prodapp.Settings");
+					startActivity(intent);
 				}
 				
 			});
@@ -90,7 +94,8 @@ public class MainActivity extends Activity {
 
 				@Override
 				public void onClick(View v) {
-					
+					Intent intent = new Intent ("com.example.prodapp.Efficiencies");
+					startActivity(intent);
 					
 				}
 				

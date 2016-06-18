@@ -4,5 +4,8 @@
     <string name="app_name">ProdApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_tasks">Tasks</string>
+    <string name="title_activity_efficiencies">Efficiencies</string>
+    <string name="title_activity_settings">Settings</string>
 
 </resources>
