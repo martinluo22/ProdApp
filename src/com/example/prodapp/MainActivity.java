@@ -57,15 +57,6 @@ public class MainActivity extends Activity {
 			View rootView = inflater.inflate(R.layout.fragment_main, container, false);
 			
 			RelativeLayout layoutMenu = (RelativeLayout)rootView.findViewById(R.id.layoutMenu);
-			//layoutMenu.setOrientation(RelativeLayout.CENTER_HORIZONTAL);
-			
-			/*Button taskPage = new Button(rootView.getContext());
-			Button efficiencyPage = new Button(rootView.getContext());
-			Button settingsPage = new Button(rootView.getContext());
-			
-			layoutMenu.addView(taskPage);
-			layoutMenu.addView(efficiencyPage);
-			layoutMenu.addView(settingsPage);*/
 			
 			ImageButton taskButton = (ImageButton)rootView.findViewById(R.id.taskButton);
 			taskButton.setOnClickListener(new OnClickListener(){

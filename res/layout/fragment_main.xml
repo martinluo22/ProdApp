@@ -1,51 +1,71 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/scroll" android:layout_width="fill_parent"
-android:layout_height="wrap_content">
-
-<RelativeLayout 
-    android:id="@+id/layoutMenu"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ca.uwaterloo.lab3_202_27.MainActivity$PlaceholderFragment" >
-
-    <ImageButton
-        android:id = "@+id/taskButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/task" />
-    
-    <ImageButton
-        android:id = "@+id/settingsButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/efficiencyButton"
-        android:layout_marginRight="16dp"
-        android:background="@drawable/settings" />
-    
-    
-    <ImageButton
-        android:id = "@+id/efficiencyButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignBottom="@+id/taskButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/efficiency" />
-    
-    <TextView
-        android:id="@+id/label1"
-        android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+     >
+ 
+    <RelativeLayout
+        android:id="@+id/layoutMenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+ 
+        <ImageButton
+            android:id="@+id/taskButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/task" />
+ 
+        <ImageButton
+            android:id="@+id/settingsButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/efficiencyButton"
+            android:background="@drawable/settings" />
+ 
+        <ImageButton
+            android:id="@+id/efficiencyButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/taskButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/efficiency" />
+ 
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+ 
+    <RelativeLayout
+        android:id="@+id/homePage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutMenu"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+ 
+        <EditText
+            android:id="@+id/new_task"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:hint="What&apos;s the Task?"
+            android:inputType="text"
+            android:background="@drawable/task_add"
+            android:padding="10dp"
+             />
+    </RelativeLayout>
+ 
 </RelativeLayout>
-</ScrollView>
