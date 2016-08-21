@@ -30,6 +30,7 @@ import android.graphics.Rect;
 public class MainActivity extends Activity {
 
 	public static EditText editTxt;
+	public static EditText catEditTxt;
 
 	@Override
 	public boolean dispatchTouchEvent(MotionEvent event) {
@@ -37,10 +38,10 @@ public class MainActivity extends Activity {
 			View v = getCurrentFocus();
 			if (v instanceof EditText) {
 				Rect outRect = new Rect();
-				v.getGlobalVisibleRect(outRect);
+				outRect.setEmpty();
+				v.getGlobalVisibleRect(outRect);			
 				if (!outRect.contains((int) event.getRawX(),
-						(int) event.getRawY())) {
-					
+						(int) event.getRawY())) {		
 					InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
 					imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
 					v.clearFocus();
@@ -77,8 +78,9 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
+		
 	}
-
+	
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
@@ -134,8 +136,7 @@ public class MainActivity extends Activity {
 			});
 
 			editTxt = (EditText) rootView.findViewById(R.id.new_task);
-			final CharSequence hintText = editTxt.getHint();
-
+			final String editTxtHint = (String) editTxt.getHint();
 			editTxt.setOnFocusChangeListener(new OnFocusChangeListener() {
 
 				@Override
@@ -147,9 +148,29 @@ public class MainActivity extends Activity {
 						editTxt.setCursorVisible(true);
 					} 
 					else {
-							editTxt.setGravity(Gravity.CENTER);
-							editTxt.setHint(hintText);
-							editTxt.setCursorVisible(false);											
+						editTxt.setGravity(Gravity.CENTER);
+						editTxt.setHint(editTxtHint);
+						editTxt.setCursorVisible(false);											
+					}
+				}
+			});		
+			
+			catEditTxt = (EditText) rootView.findViewById(R.id.task_category);
+			final String catEditTxtHint = (String) catEditTxt.getHint();
+			catEditTxt.setOnFocusChangeListener(new OnFocusChangeListener() {
+
+				@Override
+				public void onFocusChange(View v, boolean hasFocus) {
+
+					if (hasFocus) {
+						catEditTxt.setGravity(Gravity.LEFT);
+						catEditTxt.setHint("");
+						catEditTxt.setCursorVisible(true);
+					} 
+					else {
+						catEditTxt.setGravity(Gravity.CENTER);
+						catEditTxt.setHint(catEditTxtHint);
+						catEditTxt.setCursorVisible(false);											
 					}
 				}
 			});			
@@ -158,4 +179,5 @@ public class MainActivity extends Activity {
 		}
 
 	}
+
 }

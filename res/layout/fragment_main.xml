@@ -1,6 +1,6 @@
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
      >
@@ -48,7 +48,7 @@
     </RelativeLayout>
  
     <RelativeLayout
-        android:id="@+id/homePage"
+        android:id="@+id/task_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layoutMenu"
@@ -64,13 +64,39 @@
             android:id="@+id/new_task"
             android:layout_width="fill_parent"
             android:gravity="center"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:hint="What&apos;s the Task?"
             android:inputType="text"
             android:background="@drawable/task_add"
-            android:padding="10dp"
+           	android:adjustViewBounds="true"
              />
         
+        <EditText
+            android:id="@+id/task_category"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/new_task"
+            android:layout_marginTop = "-6dp"
+            android:layout_marginLeft = "2dp"
+            android:gravity="center"
+            android:hint="Category?"
+            android:inputType="text"
+             />
+        
+        <Button
+            android:id="@+id/submitTaskButton"
+            android:layout_width="fill_parent"
+           	android:adjustViewBounds="true"
+            android:layout_height="70dp"
+            android:layout_marginTop = "-6dp"
+            android:layout_marginLeft="-6dp"
+            android:layout_toRightOf="@+id/task_category"
+            android:layout_below="@+id/new_task"
+            android:background="#4CAF50"
+            />
+         
+        
     </RelativeLayout>
+     
  
 </RelativeLayout>
