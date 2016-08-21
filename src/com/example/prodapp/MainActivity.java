@@ -17,6 +17,7 @@ import android.view.View.OnKeyListener;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
@@ -151,29 +152,7 @@ public class MainActivity extends Activity {
 							editTxt.setCursorVisible(false);											
 					}
 				}
-			});
-		
-			/*editTxt.setOnEditorActionListener(new OnEditorActionListener() {
-				@Override
-				public boolean onEditorAction(TextView view, int actionId,
-						KeyEvent event) {
-					int result = actionId & EditorInfo.IME_MASK_ACTION;
-					switch (result) {
-					case EditorInfo.IME_ACTION_DONE:
-						if (editTxt.getText().length() == 0) {
-							editTxt.setGravity(Gravity.CENTER_HORIZONTAL);
-						}
-						editTxt.setHint(hintText);
-						editTxt.clearFocus();
-						break;
-					}
-					InputMethodManager imm = (InputMethodManager) rootView
-							.getContext().getSystemService(
-									Context.INPUT_METHOD_SERVICE);
-					imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-					return true;
-				}
-			}); */
+			});			
 
 			return rootView;
 		}

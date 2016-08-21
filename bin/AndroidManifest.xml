@@ -22,7 +22,7 @@
    			 </intent-filter>
         </activity>
         <activity
-            android:name=".Tasks"
+            android:name=".TasksPage"
             android:label="@string/title_activity_tasks" >
             <intent-filter>
                 <action android:name="com.example.prodapp.Tasks" />
@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Settings"
+            android:name=".SettingsPage"
             android:label="@string/title_activity_settings" >
             <intent-filter>
                 <action android:name="com.example.prodapp.Settings" />
